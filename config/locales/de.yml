@@ -6,6 +6,8 @@ de:
        body: "Text"
        date: "Datum"
        create: "Erstellen"
+       page_title:
+         index: "Beiträge:"
   time:
     formats:
      default: "%d %B %Y"
@@ -24,3 +26,6 @@ de:
       title: "Willkommen bei FoodWiz"
     links:
       welcomelink: "Mehr erfahren"
+  will_paginate:
+    previous_label: "<i class=\"glyphicon glyphicon-arrow-left\"></i>"
+    next_label: "<i class=\"glyphicon glyphicon-arrow-right\"></i>"

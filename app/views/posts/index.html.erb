@@ -1,5 +1,7 @@
-<h1>Listing posts</h1>
-
+<h1><%=t('activerecord.models.post.page_title.index')%></h1>
+<center>
+<%= will_paginate %>
+</center>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -10,6 +12,9 @@
   </thead>
 
   <tbody>
+  <% # http://ruby.railstutorial.org/chapters/updating-showing-and-deleting-users#sec-pagination %>
+
+
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>

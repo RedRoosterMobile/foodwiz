@@ -33,6 +33,9 @@ group :doc do
 end
 
 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 gem 'minitest-rails' # onl using this
 group :test do
   #https://blog.codecentric.de/2013/08/cucumber-capybara-poltergeist-de/
