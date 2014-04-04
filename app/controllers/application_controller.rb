@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
   @@themes = %w(cosmo cyborg darkly flatly lumen slate spacelab superhero united yeti readable amelia journal)
 
+
+  def is_current_page()
+    return 'ääää'
+  end
+
   before_action :set_global_view_items
   before_action :set_locale
 
