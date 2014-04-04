@@ -6,3 +6,11 @@
 a.btn {
   color: #ffffff;
 }
+input.form-control {
+  max-width: 250px;
+}
+textarea.form-control {
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 300px;
+}
