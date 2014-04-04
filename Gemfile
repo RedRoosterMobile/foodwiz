@@ -36,15 +36,6 @@ end
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
-gem 'minitest-rails' # onl using this
-group :test do
-  #https://blog.codecentric.de/2013/08/cucumber-capybara-poltergeist-de/
-  gem 'capybara'
-  gem 'minitest-rails-capybara'
-  gem 'cucumber'
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
