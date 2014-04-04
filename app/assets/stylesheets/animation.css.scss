@@ -1,4 +1,4 @@
-
+/* MIXINS */
 @mixin animation($animate...) {
   $max: length($animate);
   $animations: '';
@@ -12,6 +12,7 @@
   }
   -webkit-animation: $animations;
   -moz-animation:    $animations;
+  -ms-animation:    $animations;
   -o-animation:      $animations;
   animation:         $animations;
 }
@@ -31,15 +32,35 @@
   }
 }
 
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  -ms-webkit-border-radius: $radius;
+
+}
+/* END MIXINS */
+
+/* ANIMATIONS */
 @include keyframes(fade-in-out) {
   0% {opacity: 0}
   50% {opacity: 1}
   100% {opacity: 0}
 }
+/* END ANIMATIONS */
 
+
+/* Animate.. */
 .error_messages ul,.alert, .notice {
   position: relative;
+  background-color: blue;
+  line-height: 28px;
+  max-width: 300px;
+  text-align: center;
+
+  @include rounded-corners(5px);
+
   opacity: 0.01;
   @include animation('fade-in-out 2s 1');
-
 }

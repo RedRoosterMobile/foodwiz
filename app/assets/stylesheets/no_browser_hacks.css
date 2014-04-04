@@ -1,0 +1,14 @@
+/**
+ * special IE stuff here . using body-classes from Modernizr
+ * like:  js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange
+ * history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius
+ * boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions
+ * fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths
+ */
+
+.container p.browsehappy {
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+    background-color: #abdfdd;
+}
