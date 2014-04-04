@@ -5,14 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FoodWiz - <%= controller_name %></title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <!-- Bootstrap 3 -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/<%=@bootstrap_version%>/<%=@bootswatch_theme%>/bootstrap.min.css">
 
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/<%=@bootstrap_version%>/<%=@bootswatch_theme%>/bootstrap.min.css">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <script src="//netdna.bootstrapcdn.com/bootstrap/<%=@bootstrap_version%>/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body class="<%= controller_name %>">
 <div class="container">
