@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails foodwiz: development" uuid="0fd6d1e9-c366-4c00-9051-901b6fa300cb">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails foodwiz: test" uuid="24c93926-28f4-4013-9344-c6336ebeb8cd">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails foodwiz: production" uuid="204a79f5-b352-4e19-8804-b5e2e5589186">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails foodwiz: cucumber" uuid="9ba37bc9-d36e-4b55-9a86-8dfa5948c868">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

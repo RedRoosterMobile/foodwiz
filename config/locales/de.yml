@@ -1,0 +1,9 @@
+de:
+  activerecord:
+  models:
+  time:
+    formats:
+     default: "%Y test time"
+  helpers:
+   links:
+     back: "Zurück"
