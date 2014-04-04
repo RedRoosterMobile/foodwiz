@@ -32,3 +32,41 @@ div {
     list-style: square;
   }
 }
+
+@keyframes upDown
+{
+  from {top:0px;}
+  50% {top:5px;}
+  to {top:0px;}
+}
+@-webkit-keyframes upDown
+{
+  from {top:0px;}
+  50% {top:5px;}
+  to {top:0px;}
+}
+@-moz-keyframes upDown
+{
+  from {top:0px;}
+  50% {top:5px;}
+  to {top:0px;}
+}
+@-o-keyframes upDown
+{
+  from {top:0px;}
+  50% {top:5px;}
+  to {top:0px;}
+}
+.error_messages ul,.alert, .notice {
+  position: relative;
+  animation: upDown 2s;
+  -moz-animation: upDown 2s; /* Firefox */
+  -webkit-animation: upDown 2s; /* Safari and Chrome */
+  -ms-animation: upDown 2s;
+
+  animation-iteration-count:1;
+  -moz-animation-iteration-count:1; /* Firefox */
+  -webkit-animation-iteration-count:1; /*Safari and Chrome*/
+  -o-animation-iteration-count:1; /* Opera */
+}
+

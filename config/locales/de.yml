@@ -1,5 +1,11 @@
 de:
   activerecord:
+   errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Sie müssen ein Passwort angeben"
    models:
      post:
        title: "Titel"

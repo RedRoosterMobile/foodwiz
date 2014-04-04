@@ -46,6 +46,10 @@ gem 'pry-debugger'
 gem 'minitest-rails'
 group :test do
   gem "minitest", "~> 4.7"
+  gem 'cucumber-rails', require: false
+  gem 'capybara_minitest_spec'
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 end
 # Use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.0'
