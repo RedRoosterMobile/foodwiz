@@ -7,7 +7,7 @@ de:
        date: "Datum"
        create: "Erstellen"
        page_title:
-         index: "Beiträge:"
+         index: "Beiträge"
   time:
     formats:
      default: "%d %B %Y"

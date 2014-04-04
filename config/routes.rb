@@ -1,11 +1,22 @@
 Foodwiz::Application.routes.draw do
-  resources :posts
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'posts#index'
+
+    get "logout" => "sessions#destroy", :as => "logout"
+    get "login" => "sessions#new", :as => "login"
+    get "signup" => "users#new", :as => "signup"
+    resources :users
+    resources :sessions
+    resources :posts
+    resources :home
+    get "secret" => "home#secret", :as => "secret"
+    root :to => "home#index"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

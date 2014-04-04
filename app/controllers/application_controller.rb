@@ -10,8 +10,7 @@ class ApplicationController < ActionController::Base
 
   #http://guides.rubyonrails.org/i18n.html
   def set_locale
-    I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
-    session[:locale] = I18n.locale
+    session[:locale] = I18n.locale = params[:locale] || session[:locale] || I18n.default_locale
   end
 
   def set_global_view_items
@@ -26,8 +25,8 @@ class ApplicationController < ActionController::Base
 
   def bootswatch_theme
     #http://www.bootstrapcdn.com/#bootswatch_tab
-    @bootswatch_theme = params['theme'] || session['theme'] || 'readable'
-    session['theme'] = @bootswatch_theme
+    session['theme'] = @bootswatch_theme = params['theme'] || session['theme'] || 'amelia'
+
   end
 
   def bootswatch_themes
