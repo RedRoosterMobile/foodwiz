@@ -159,6 +159,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  minitest (~> 4.7)
   minitest-rails
   pg
   pry-debugger

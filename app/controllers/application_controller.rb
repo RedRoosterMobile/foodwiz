@@ -39,6 +39,11 @@ class ApplicationController < ActionController::Base
     @bootswatch_themes = @@themes
   end
 
+  private
+  def not_authenticated
+    redirect_to login_path, notice: "Please login first"
+  end
+
 
 
 

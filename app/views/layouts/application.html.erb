@@ -12,13 +12,13 @@
       <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
       <script src="//netdna.bootstrapcdn.com/bootstrap/<%=@bootstrap_version%>/js/bootstrap.min.js"></script>
       <%= csrf_meta_tags %>
-
-
-
     </head>
     <body class="<%= controller_name %>">
         <div class="container">
           <%= render '/shared/navbar' %>
+          <% flash.each do |name, msg| -%>
+              <%= content_tag :div, msg, class: "#{name}" %>
+          <% end %>
           <%= yield %>
         </div>
     </body>

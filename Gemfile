@@ -41,8 +41,12 @@ gem 'bootstrap-will_paginate'
 gem 'sorcery'
 gem 'bcrypt'
 
-gem 'minitest-rails'
 gem 'pry-debugger'
+
+gem 'minitest-rails'
+group :test do
+  gem "minitest", "~> 4.7"
+end
 # Use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.0'
 
