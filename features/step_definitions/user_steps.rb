@@ -5,7 +5,7 @@ And(/^I subscribe with my credentials$/) do
   fill_in 'Email' , with: 'somefuck@example.com'
   fill_in 'Password' , with: '123456'
   fill_in 'Password confirmation' , with: '123456'
-  click_button 'Abendand'
+  click_button t('helpers.submit.send')
 end
 
 Then(/^I should be logged in$/) do

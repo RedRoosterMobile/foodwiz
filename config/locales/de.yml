@@ -27,6 +27,8 @@ de:
      edit: "Bearbeiten"
      destroy: "Löschen"
      new_post: "Neuer Beitrag"
+   submit:
+     send: "Senden"
   navigation:
     jumbotron:
       title: "Willkommen bei FoodWiz"

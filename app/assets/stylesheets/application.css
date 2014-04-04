@@ -12,6 +12,7 @@
  *= require bootstrap_overwrite
  *= require 'posts'
  *= require 'scaffolds'
+ *= require 'animation'
  */
 
 
