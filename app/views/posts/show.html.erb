@@ -1,16 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('activerecord.models.post.title')%>:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Body:</strong>
+  <strong><%= t('activerecord.models.post.body')%>:</strong>
   <%= @post.body %>
 </p>
 
 <div class="btn-group">
-    <%= link_to 'Edit', edit_post_path(@post) , class: "btn btn-primary btn-sm" %>
-    <%= link_to 'Back', posts_path , class: "btn btn-info btn-sm" %>
+    <%= link_to t('helpers.links.edit'), edit_post_path(@post) , class: "btn btn-primary btn-sm" %>
+    <%= link_to t('helpers.links.back'), posts_path , class: "btn btn-info btn-sm" %>
 </div>

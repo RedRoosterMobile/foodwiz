@@ -1,9 +1,26 @@
 de:
   activerecord:
-  models:
+   models:
+     post:
+       title: "Titel"
+       body: "Text"
+       date: "Datum"
+       create: "Erstellen"
   time:
     formats:
-     default: "%Y test time"
+     default: "%d %B %Y"
+  datetime:
+      formats:
+       default: "ass"
   helpers:
    links:
      back: "Zurück"
+     show: "Anzeigen"
+     edit: "Bearbeiten"
+     destroy: "Löschen"
+     new_post: "Neuer Beitrag"
+  navigation:
+    jumbotron:
+      title: "Willkommen bei FoodWiz"
+    links:
+      welcomelink: "Mehr erfahren"
