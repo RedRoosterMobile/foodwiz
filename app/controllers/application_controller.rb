@@ -19,7 +19,8 @@ class ApplicationController < ActionController::Base
 
   def bootswatch_theme
     #http://www.bootstrapcdn.com/#bootswatch_tab
-    @bootswatch_theme = params['theme'] || 'readable'
+    @bootswatch_theme = params['theme'] || session['theme'] || 'readable'
+    session['theme'] = @bootswatch_theme
   end
 
   def bootswatch_themes
