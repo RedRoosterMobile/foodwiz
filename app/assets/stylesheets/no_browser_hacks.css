@@ -6,6 +6,7 @@
  * fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths
  */
 
+/* get a proper browser message */
 .container p.browsehappy {
     width: 100%;
     line-height: 25px;
