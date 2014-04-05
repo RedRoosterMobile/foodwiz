@@ -43,6 +43,7 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+# emuns 4.1 http://stackoverflow.com/questions/14911977/best-way-to-store-enum-value-in-activerecord-and-convert-to-string-for-display
 test: &test
   adapter: postgresql
   encoding: unicode

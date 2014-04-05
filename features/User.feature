@@ -7,7 +7,8 @@ Feature: User signup
     And I subscribe with my credentials
     Then I should be logged in
 
-  Scenario: anonymous Customer wants to see login page
+  Scenario: as a customer I don't want to enter an invalid email
     Given I am on the home page
-    And I wanna see some posts
-    Then I should be on login page
+    And I go to signup page
+    And I submit invalid data
+    Then I should get an error message
