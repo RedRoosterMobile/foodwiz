@@ -6,6 +6,7 @@ Foodwiz::Application.initialize!
 
 Foodwiz::Application.configure do
   config.foodwiz = {
-      pagination_count: 5
+      pagination_count: 5,
+      user_levels: [:default, :admin]
   }
 end
