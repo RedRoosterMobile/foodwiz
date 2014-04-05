@@ -14,18 +14,18 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if current_user %>
-            <li <%= controller_name==logout_path.gsub('/','') ? " class=active" : '' %>>
+            <li <%= active_navigation_path(logout_path) %>>
               <%= link_to 'Ausloggen', logout_path %>
             </li>
         <% else %>
-            <li <%= controller_name==signup_path.gsub('/','') ? " class=active" : '' %>>
+            <li <%= active_navigation_path(signup_path) %>>
               <%= link_to 'Anmelden', signup_path %>
             </li>
-            <li <%= controller_name==login_path.gsub('/','') ? " class=active" : '' %>>
+            <li <%= active_navigation_path(login_path) %>>
               <%= link_to 'Einloggen', login_path %>
             </li>
         <% end %>
-        <li <%= controller_name==posts_path.gsub('/','') ? " class=active" : '' %> >
+        <li <%= active_navigation_path(posts_path) %> >
           <%= link_to t('activerecord.models.post.page_title.index'), posts_path %>
         </li>
         <li class="dropdown">
