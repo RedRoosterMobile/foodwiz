@@ -2,9 +2,11 @@
   <div class="col-md-4 col-sm-4">
 
     <% if Rails.env == 'development' %>
-        <h1>Users#new</h1>
-        <p>Find me in app/views/users/new.html.erb</p>
-        <h1>Sign Up</h1>
+        <div class="dev">
+            <h1>Users#new</h1>
+            <p>Find me in app/views/users/new.html.erb</p>
+            <h1>Sign Up</h1>
+        </div>
     <% end %>
     <%= form_for @user do |f| %>
         <% if @user.errors.any? %>

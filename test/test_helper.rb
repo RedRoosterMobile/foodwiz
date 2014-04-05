@@ -3,7 +3,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 
 require "minitest/spec"
-
+include Sorcery::TestHelpers::Rails
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 

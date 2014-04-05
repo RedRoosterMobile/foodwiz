@@ -52,7 +52,7 @@
 
 
 /* Animate.. */
-.error_messages ul,.alert, .notice {
+.alert, .notice {
   position: relative;
   background-color: blue;
   line-height: 28px;
@@ -64,3 +64,5 @@
   opacity: 0.01;
   @include animation('fade-in-out 2s 1');
 }
+
+.error_messages ul {}

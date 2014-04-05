@@ -1,0 +1,4 @@
+valid_user:
+  email: whatever@whatever.com
+  salt: <%= salt = "asdasdastr4325234324sdfds" %>
+  crypted_password: <%= Sorcery::CryptoProviders::BCrypt.encrypt("secret", salt) %>

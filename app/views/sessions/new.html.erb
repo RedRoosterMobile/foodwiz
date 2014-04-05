@@ -1,8 +1,10 @@
 <div class="container">
     <% if Rails.env == 'development' %>
+      <div class="dev">
         <h1>Sessions#new</h1>
         <p>Find me in app/views/sessions/new.html.erb</p>
         <h1>Log in</h1>
+      </div>
     <% end %>
 
     <%= form_tag sessions_path do %>
