@@ -4,6 +4,8 @@ de:
       models:
         user:
           attributes:
+            email:
+              invalid: "Diese Email ist ungültig"
             password:
               blank: "Sie müssen ein Passwort angeben"
    models:

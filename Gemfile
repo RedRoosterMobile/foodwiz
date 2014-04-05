@@ -52,6 +52,7 @@ group :test do
   gem 'capybara_minitest_spec'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'simplecov'
 end
 # Use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.0'

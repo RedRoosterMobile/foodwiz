@@ -5,11 +5,6 @@ class ApplicationController < ActionController::Base
 
   @@themes = %w(cosmo cyborg darkly flatly lumen slate spacelab superhero united yeti readable amelia journal)
 
-
-  def is_current_page()
-    return 'ääää'
-  end
-
   before_action :set_global_view_items
   before_action :set_locale
 
@@ -37,6 +32,12 @@ class ApplicationController < ActionController::Base
   def bootswatch_themes
     #http://www.bootstrapcdn.com/#bootswatch_tab
     @bootswatch_themes = @@themes
+  end
+
+
+  def pagination_count
+    # TODO: make this dynamic
+    Foodwiz::Application.config.foodwiz[:pagination_count]
   end
 
   private
