@@ -7,6 +7,10 @@ Foodwiz::Application.configure do
   # and recreated between test runs. Don't rely on the data there!
   config.cache_classes = true
 
+  #a_source.rb:199:in `rescue in create_default_data_source': No timezone data sour
+  #ce could be found. To resolve this, either install TZInfo::Data (e.g. by running
+  #`gem install tzinfo-data`) or specify a zoneinfo directory using `TZInfo::DataSource.set(:zoneinfo, zoneinfo_path)`. (TZInfo::DataSourceNotFound)
+
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
   # preloads Rails for running tests, you may have to set it to true.

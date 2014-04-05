@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.4'
+gem 'rails', '4.1.0.rc2'
+#gem 'rails', '4.0.4'
+gem "tzinfo-data"
+
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -43,9 +46,9 @@ gem 'bcrypt'
 
 gem 'pry-debugger'
 
-gem 'minitest-rails'
+#gem 'minitest-rails'
 group :test do
-  gem "minitest", "~> 4.7"
+  gem 'minitest'
   gem 'cucumber-rails', require: false
   gem 'cucumber'
   gem 'poltergeist'

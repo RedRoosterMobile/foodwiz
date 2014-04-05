@@ -20,7 +20,7 @@ module Foodwiz
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :de
     config.generators do |g|
-      g.test_framework :mini_test, :spec => true, :fixture => false
+      g.test_framework :mini_test, :spec => true, :fixture => true
     end
   end
 end
