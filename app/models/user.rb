@@ -12,8 +12,8 @@ MyModel.last.status # gets the string description of the status of my model
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
-  enum user_level: Foodwiz::Application.config.foodwiz[:user_levels]
-
+  #enum user_level: Foodwiz::Application.config.foodwiz[:user_levels]
+  enum user_level: [:default,:admin]
 
   # for user levels wait for rails 4.1 (minitest-rails)
 
