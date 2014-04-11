@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.user_level = :admin
+    #@user.user_level = :admin
 
     if @user.save
       redirect_to root_url, :notice => 'Signed Up!'

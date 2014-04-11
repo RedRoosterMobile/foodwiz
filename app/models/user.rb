@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
   #enum user_level: Foodwiz::Application.config.foodwiz[:user_levels]
-  enum user_level: [:default,:admin], default: :default
+  enum user_level: [:default,:admin]
 
   # for user levels wait for rails 4.1 (minitest-rails)
 
