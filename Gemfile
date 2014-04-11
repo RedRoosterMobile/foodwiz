@@ -5,6 +5,9 @@ gem 'rails', '4.1.0'
 #gem 'rails', '4.0.4'
 gem "tzinfo-data"
 
+# asset generation on heroku
+gem 'rails_12factor'
+
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -35,12 +38,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-
+# pagination
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
 
-#auth
+# auth
 gem 'sorcery'
 gem 'bcrypt'
 

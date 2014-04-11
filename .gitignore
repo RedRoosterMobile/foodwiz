@@ -6,8 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
-.idea/
-/.idea
+.idea
+.idea/*
 ANSI32.dll
 ANSI64.dll
 ansicon.exe
@@ -25,3 +25,5 @@ v8preparser.dll
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/coverage
+/app/controllers/coverage
