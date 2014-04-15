@@ -13,6 +13,7 @@
  *= require 'posts'
  *= require 'scaffolds'
  *= require 'animation'
+ *= require bootstrap-wysihtml5/b3
  */
 
 .dev {

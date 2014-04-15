@@ -18,7 +18,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td class="hidden-xs"><%= post.body %></td>
+        <td class="hidden-xs"><%= raw post.body %></td>
         <td class="hidden-xs"><%= l(post.created_at) %></td>
         <td class="text-right">
           <div class="btn-group" >
