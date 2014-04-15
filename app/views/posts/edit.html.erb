@@ -2,6 +2,27 @@
 
 <%= render 'form' %>
 
+
+
+<% if params[:html] == 'true' %>
+
+    <% @editor_type_link =  link_to 'Text-Editor',url_for(params.merge(:html => false)), method: :get , class: "btn btn-success btn-sm"  %>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.wysihtml5').each(function(i, elem) {
+                $(elem).wysihtml5();
+            });
+        })
+    </script>
+<% else %>
+    <% @editor_type_link = link_to 'HTML-Editor',url_for(params.merge(:html => true)), method: :get, class: "btn btn-success btn-sm"  %>
+<% end %>
+
+  <%=  @editor_type_link %>
+  <br/>
+
+<br/>
 <div class="btn-group">
 <%= link_to t('helpers.links.show'), @post , class: "btn btn-success btn-sm" %>
 <%= link_to t('helpers.links.back'), posts_path, class: "btn btn-info btn-sm" %>
