@@ -61,6 +61,7 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'simplecov'
+  gem 'coveralls', require: false
 end
 
 group :test,:development do
