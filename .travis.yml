@@ -1,2 +1,4 @@
 language: ruby
 sudo: false
+before_script:
+  - psql -c 'create database foodwiz_test;' -U postgres
