@@ -50,8 +50,8 @@ test: &test
   encoding: unicode
   database: foodwiz_test
   pool: 5
-  username: foodwiz
-  password: foodwiz
+  username: <%= ENV['TRAVIS'] ? 'postgres' : 'foodwiz' %>
+  password: <%= ENV['TRAVIS'] ? '' : 'foodwiz' %>
   host: localhost
 
 production:
