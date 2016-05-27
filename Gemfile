@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.2.6'
 #gem 'rails', '4.0.4'
-gem "tzinfo-data"
+gem 'tzinfo-data'
 
 # asset generation on heroku
 gem 'rails_12factor'
@@ -13,13 +13,13 @@ gem 'rails_12factor'
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -44,14 +44,12 @@ gem 'bootstrap-will_paginate'
 
 # icons + wysiwyg editor
 gem 'font-awesome-rails'
-gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
-    :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
+gem 'bootstrap-wysihtml5-rails'
 
 # auth
 gem 'sorcery'
 gem 'bcrypt'
 
-gem 'pry-debugger'
 
 #gem 'minitest-rails'
 group :test do
