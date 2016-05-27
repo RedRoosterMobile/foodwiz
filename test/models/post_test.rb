@@ -1,7 +1,9 @@
 require 'test_helper'
 
-class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+describe Post do
+  before do
+    @user = users(:valid_user)
+  end
+
+
 end

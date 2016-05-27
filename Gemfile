@@ -62,6 +62,10 @@ group :test do
   gem 'database_cleaner'
   gem 'simplecov'
 end
+
+group :test,:development do
+  gem 'byebug'
+end
 # Use ActiveModel has_secure_password
 #gem 'bcrypt-ruby', '~> 3.0.0'
 

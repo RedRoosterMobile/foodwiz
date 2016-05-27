@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
+
+  #include Sorcery::TestHelpers::Rails::Integration
+  include Sorcery::TestHelpers::Rails::Controller
+
   setup do
     @post = posts(:one)
     login_user(users(:valid_user))

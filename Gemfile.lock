@@ -44,6 +44,7 @@ GEM
     bootstrap-wysihtml5-rails (0.3.3.8)
       railties (>= 3.0)
     builder (3.2.2)
+    byebug (9.0.4)
     capybara (2.7.1)
       addressable
       mime-types (>= 1.16)
@@ -216,6 +217,7 @@ DEPENDENCIES
   bcrypt
   bootstrap-will_paginate
   bootstrap-wysihtml5-rails
+  byebug
   capybara_minitest_spec
   coffee-rails
   cucumber

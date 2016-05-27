@@ -18,7 +18,7 @@ de:
          index: "Beiträge"
   time:
     formats:
-     default: "%d %B %Y"
+     default: "%d %m %Y"
   datetime:
       formats:
        default: "ass"

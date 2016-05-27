@@ -24,7 +24,9 @@
           <div class="btn-group" >
             <%= link_to t('helpers.links.show'), post, class: 'btn btn-primary btn-xs' %>
             <%= link_to t('helpers.links.edit'), edit_post_path(post),class: 'btn btn-warning btn-xs' %>
+            <% if is_admin? or current_user.id == post.user_id %>
             <%= link_to t('helpers.links.destroy'), post,class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
           </div>
         </td>
       </tr>
