@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
     Foodwiz::Application.config.foodwiz[:pagination_count]
   end
 
-  :private
+  private
 
   def not_authenticated
     redirect_to login_path, notice: "Please login first"

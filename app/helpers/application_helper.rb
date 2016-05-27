@@ -5,6 +5,6 @@ module ApplicationHelper
 
   def active_navigation_path(some_path)
     #fixme: find a better way to do this
-    controller_name == some_path.gsub('/','') ? " class=active" : ''
+    controller_name == some_path.delete('/') ? " class=active" : ''
   end
 end
