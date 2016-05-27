@@ -1,4 +1,9 @@
 language: ruby
 sudo: false
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
 before_script:
   - psql -c 'create database foodwiz_test;' -U postgres
