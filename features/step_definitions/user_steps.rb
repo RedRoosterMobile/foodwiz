@@ -55,3 +55,21 @@ end
 Then(/^I should be logged in$/) do
   assert page.has_content?('Ausloggen')
 end
+
+And(/^Fill in wrong credentials$/) do
+  fill_in 'Email' , with: 'somefuck@example.com'
+  fill_in 'Password' , with: '123456'
+  click_button 'Log in'
+end
+
+Then(/^I should get a wrong credentials message$/) do
+  assert page.has_content? 'Email or password was invalid.'
+end
+
+When(/^I log out$/) do
+  click_link 'Ausloggen'
+end
+
+Then(/^I should be logged out$/) do
+  click_link 'Einloggen'
+end
