@@ -3,4 +3,11 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+
+
+#require 'coveralls/rake/task'
+#Coveralls::RakeTask.new
+#task :test_with_coveralls => [:test, :features, 'coveralls:push']
+#task :test_with_coveralls => [:test]
+
 Foodwiz::Application.load_tasks
