@@ -8,7 +8,7 @@ And(/^I subscribe with my credentials$/) do
   click_button I18n.t('helpers.submit.send')
 end
 
-Then(/^I should be logged in$/) do
+Then(/^I should be signed up$/) do
   assert page.has_content?('Signed Up!')
 end
 
@@ -38,4 +38,20 @@ And(/^I go to signup page$/) do
     click_link 'Anmelden'
   end
 
+end
+
+When(/^I go to login page$/) do
+  within 'nav' do
+    click_link 'Einloggen'
+  end
+end
+
+And(/^Fill in my credentials$/) do
+  fill_in 'Email' , with: 'somefuck@example.com'
+  fill_in 'Password' , with: '123456'
+  click_button 'Log in'
+end
+
+Then(/^I should be logged in$/) do
+  assert page.has_content?('Ausloggen')
 end

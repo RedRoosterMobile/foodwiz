@@ -5,6 +5,9 @@ Feature: User signup
   Scenario: Customer wants to sign up
     Given I am on the home page
     And I subscribe with my credentials
+    Then I should be signed up
+    When I go to login page
+    And Fill in my credentials
     Then I should be logged in
 
   Scenario: as a customer I don't want to enter an invalid email
