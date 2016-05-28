@@ -43,6 +43,11 @@ class PostsControllerTest < ActionController::TestCase
     assert_redirected_to post_path(assigns(:post))
   end
 
+  test 'should not create empty post' do
+    post :create, post: { title: '' }
+    assert_response :success
+  end
+
   test 'should show post' do
     get :show, id: @post
     assert_response :success

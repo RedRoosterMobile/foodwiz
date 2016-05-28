@@ -28,8 +28,15 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    begin
+      success = @post.save
+    rescue => ex
+      puts ex.message
+      success = false
+    end
+
     respond_to do |format|
-      if @post.save
+      if success
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
