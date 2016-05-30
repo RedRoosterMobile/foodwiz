@@ -7,7 +7,6 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
     Coveralls::SimpleCov::Formatter
 ]
 SimpleCov.start
-#Coveralls.wear_merged!('rails')
 
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
