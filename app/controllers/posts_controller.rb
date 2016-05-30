@@ -31,7 +31,7 @@ class PostsController < ApplicationController
     begin
       success = @post.save
     rescue => ex
-      puts ex.message
+      #Rails.logger.log ex.message
       success = false
     end
 
