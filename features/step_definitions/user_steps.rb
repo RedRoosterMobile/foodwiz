@@ -4,8 +4,8 @@ And(/^I subscribe with my credentials$/) do
   end
   user = build(:user)
   fill_in 'Email' , with: user.email
-  fill_in 'Password' , with: '123456'
-  fill_in 'Password confirmation' , with: '123456'
+  fill_in 'Password' , with: user.password
+  fill_in 'Password confirmation' , with: user.password
   click_button I18n.t('helpers.submit.send')
 end
 
@@ -24,9 +24,10 @@ Then(/^I should be on login page$/) do
 end
 
 And(/^I submit invalid data$/) do
-  fill_in 'Email' , with: 'brokenemail2'
-  fill_in 'Password' , with: '123456'
-  fill_in 'Password confirmation' , with: '123456'
+  user = build(:user, email:'brokenemail2')
+  fill_in 'Email' , with: user.email
+  fill_in 'Password' , with: user.password
+  fill_in 'Password confirmation' , with: user.password
   click_button I18n.t('helpers.submit.send')
 end
 
@@ -48,8 +49,9 @@ When(/^I go to login page$/) do
 end
 
 And(/^Fill in my credentials$/) do
-  fill_in 'Email' , with: 'somefuck@example.com'
-  fill_in 'Password' , with: '123456'
+  user = build(:user)
+  fill_in 'Email' , with: user.email
+  fill_in 'Password' , with: user.password
   click_button 'Log in'
 end
 
@@ -58,8 +60,9 @@ Then(/^I should be logged in$/) do
 end
 
 And(/^Fill in wrong credentials$/) do
-  fill_in 'Email' , with: 'somefuck@example.com'
-  fill_in 'Password' , with: '123456'
+  user = build(:user)
+  fill_in 'Email' , with: user.email
+  fill_in 'Password' , with: user.password
   click_button 'Log in'
 end
 
