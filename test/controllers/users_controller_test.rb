@@ -8,17 +8,18 @@ class UsersControllerTest < ActionController::TestCase
   end
 
   test 'should create user with correct params' do
+    user = build(:user)
     assert_difference('User.count') do
-      post :create, user: { email: "test@t.com", password: "password", password_confirmation: "password" }
+      post :create, user: { email: user.email, password: user.password, password_confirmation: user.password }
     end
     assert_redirected_to root_path
   end
 
-  test 'should not create user with incorrect params' do
+  test 'should not create user non matching password' do
+    user = build(:user)
     assert_no_difference('User.count') do
-      post :create, user: { email: "test2@t.com", password: "password", password_confirmation: "password2" }
+      post :create, user: { email: user.email, password: user.password, password_confirmation: 'someotherpw'}
     end
-
     assert_response :success
   end
 

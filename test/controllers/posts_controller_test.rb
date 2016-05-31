@@ -2,18 +2,18 @@ require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
 
-  #include Sorcery::TestHelpers::Rails::Integration
   include Sorcery::TestHelpers::Rails::Controller
 
   setup do
-    @post = posts(:one)
-    login_user(users(:valid_user))
+    @user = create(:user, :with_post)
+    @post = @user.posts.first
+    login_user(@user)
   end
 
   test 'there should be pagination' do
     # create several posts and make sure pagination is on screen
     (Foodwiz::Application.config.foodwiz[:pagination_count]*2).times do
-      post :create, post: { body: @post.body, title: @post.title }
+      post :create, post: @post.attributes
     end
     get :index
     assert_template :index

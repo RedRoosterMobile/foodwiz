@@ -2,7 +2,8 @@ And(/^I subscribe with my credentials$/) do
   within 'nav' do
     click_link 'Anmelden'
   end
-  fill_in 'Email' , with: 'somefuck@example.com'
+  user = build(:user)
+  fill_in 'Email' , with: user.email
   fill_in 'Password' , with: '123456'
   fill_in 'Password confirmation' , with: '123456'
   click_button I18n.t('helpers.submit.send')

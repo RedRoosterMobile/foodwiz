@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   #enum user_level: Foodwiz::Application.config.foodwiz[:user_levels]
   enum user_level: [:default,:admin]
 
+  has_many :posts
+
   # for user levels wait for rails 4.1 (minitest-rails)
 
   validates_confirmation_of :password

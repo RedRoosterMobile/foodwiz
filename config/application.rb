@@ -21,7 +21,7 @@ module Foodwiz
     config.i18n.default_locale = :de
     config.serve_static_files = true
     config.generators do |g|
-      g.test_framework :mini_test, :spec => true, :fixture => true
+      g.test_framework :mini_test, :spec => true, :fixture => false
     end
   end
 end

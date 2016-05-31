@@ -2,7 +2,7 @@ require "test_helper"
 
 describe User do
   before do
-    @user = users(:valid_user)
+    @user = create(:user)
   end
 
   it "must be valid" do
