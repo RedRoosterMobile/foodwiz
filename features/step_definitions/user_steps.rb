@@ -48,7 +48,7 @@ When(/^I go to login page$/) do
   end
 end
 
-And(/^Fill in my credentials$/) do
+And(/^Fill in (my|wrong) credentials$/) do |arg|
   user = build(:user)
   fill_in 'Email' , with: user.email
   fill_in 'Password' , with: user.password
@@ -57,13 +57,6 @@ end
 
 Then(/^I should be logged in$/) do
   assert page.has_content?('Ausloggen')
-end
-
-And(/^Fill in wrong credentials$/) do
-  user = build(:user)
-  fill_in 'Email' , with: user.email
-  fill_in 'Password' , with: user.password
-  click_button 'Log in'
 end
 
 Then(/^I should get a wrong credentials message$/) do
