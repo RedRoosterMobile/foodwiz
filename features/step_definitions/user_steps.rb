@@ -13,16 +13,6 @@ Then(/^I should be signed up$/) do
   assert page.has_content?('Signed Up!')
 end
 
-And(/^I wanna see some posts$/) do
-  within 'nav' do
-    click_link 'Beiträge'
-  end
-end
-
-Then(/^I should be on login page$/) do
-  assert page.has_content?('Please login first')
-end
-
 And(/^I submit invalid data$/) do
   user = build(:user, email:'brokenemail2')
   fill_in 'Email' , with: user.email
